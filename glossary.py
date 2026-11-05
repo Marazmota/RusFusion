@@ -52,8 +52,7 @@ GLOSSARY = {
     "Join": "Объединение", "Cut": "Вырезание", "Intersect": "Пересечение",
     "New Body": "Новое тело", "Distance": "Расстояние", "Angle": "Угол",
     "Direction": "Направление", "One Side": "Одна сторона", "Two Sides": "Две стороны",
-    "Symmetric": "Симметрично", "Operation": "Операция", "Extent": "Граница",
-    "Start": "Начало", "Profile": "Эскиз (профиль)", "Profiles": "Профили",
+    "Symmetric": "Симметрично", "Operation": "Операция", "Profiles": "Профили",
     "Taper Angle": "Угол наклона", "Profile Plane": "Плоскость профиля",
     # Сборка
     "Joint": "Соединение", "As-built Joint": "Соединение по месту", "Joint Origin": "Начало соединения",
@@ -79,7 +78,7 @@ GLOSSARY = {
     # Браузер
     "Document Settings": "Настройки документа", "Named Views": "Именованные виды",
     "Origin": "Начало координат", "Bodies": "Тела", "Sketches": "Эскизы",
-    "Components": "Компоненты", "Construction ": "Построения", "Joints": "Соединения",
+    "Components": "Компоненты", "Joints": "Соединения",
     "Units": "Единицы", "Timeline": "История",
     # Файл и общее
     "File": "Файл", "New Design": "Новый проект", "Open": "Открыть", "Save": "Сохранить",

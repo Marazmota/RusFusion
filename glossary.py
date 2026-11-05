@@ -3,7 +3,8 @@
 GLOSSARY = {
     # Рабочие пространства и вкладки
     "Design": "Конструирование", "Solid": "Тело", "Surface": "Поверхность", "Mesh": "Сетка",
-    "Sheet Metal": "Листовой металл", "Plastic": "Пластик", "Utilities": "Утилиты",
+    "Sheet Metal": "Листовой металл", "Plastic": "Пластик", "Utilities": "Утилиты", "Configure": "Настройка", "Part Design": "Деталь",
+    "Browser": "Браузер", "Untitled": "Без названия",
     "Manage": "Управление", "Tools": "Инструменты", "Render": "Визуализация",
     "Animation": "Анимация", "Simulation": "Моделирование", "Manufacture": "Производство",
     "Drawing": "Чертёж", "Electronics": "Электроника", "Form": "Форма",

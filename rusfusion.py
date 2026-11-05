@@ -126,9 +126,21 @@ def fix_case(src, dst):
     return lead + dst + trail
 
 
+def gloss(src):
+    """Словарь с учётом регистра: SOLID -> ТЕЛО, Solid -> Тело."""
+    key = src.strip()
+    if key in GLOSSARY:
+        return GLOSSARY[key]
+    if key.isupper():
+        for k, v in GLOSSARY.items():
+            if k.upper() == key:
+                return v.upper()
+    return None
+
+
 def translate_one(src):
-    if src in GLOSSARY:
-        return GLOSSARY[src]
+    if gloss(src):
+        return gloss(src)
     p, toks = protect(src)
     out = gtranslate(p)
     if out is None:
@@ -173,10 +185,7 @@ def save_cache(cache):
 
 def translate_all(strings, cache):
     todo = [s for s in strings if s not in cache and needs_translation(s)]
-    for s in strings:
-        if s in GLOSSARY:
-            cache[s] = GLOSSARY[s]
-    todo = [s for s in todo if s not in cache]
+    todo = [s for s in todo if not gloss(s)]
     log(f"Строк всего: {len(strings)}, нужно перевести: {len(todo)}")
     if not todo:
         return
@@ -211,7 +220,7 @@ def write_translated(src_path, dst_path, cache):
     tree = ET.parse(src_path)
     for l in tree.getroot().iter("label"):
         en = l.get("devLabel") or ""
-        l.set("translation", cache.get(en, en) if en else "")
+        l.set("translation", (gloss(en) or cache.get(en, en)) if en else "")
     tree.write(dst_path, encoding="utf-8", xml_declaration=True)
 
 
